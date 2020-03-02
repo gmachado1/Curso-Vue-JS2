@@ -1,0 +1,55 @@
+<meta charset="utf-8">
+<script src="http://unpkg.com/vue"></script>
+
+<div id="app">
+    <p v-if="logado"> Usuário Logado: {{nome}}</p>
+    <p v-else>Nenhum usuário logado.</p>
+
+    <ul>
+        <li v-for="(cor,i) in cores">{{++i}}) {{ cor }} </li>
+
+    </ul>
+    <hr>
+    <template v-for="(cor,i) in cores">
+        <h1>{{cor}}</h1>
+        <p>{{i}}</p>
+    </template>
+    <hr>
+    <ul>
+        <li v-for="pessoa in pessoas">
+            {{pessoa.nome}}
+        </li>
+    </ul>
+    <hr>
+    <hr>
+    <ul>
+        <li v-for="pessoa in pessoas">
+            <template v-for="(valor, chave, index) in pessoa">
+                {{valor}} = {{chave}}({{++index}})
+            </template>
+            
+        </li>
+    </ul>
+
+</div>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            cores: ['vermelho', 'verde', 'amarelo', 'azul'],
+            pessoas: [
+                { nome: 'Ana', idade: 26, peso: 59 },
+                { nome: 'Guilherme', idade: 22, peso: 89 }]
+        }
+    })
+</script>
+<style>
+    ul {
+        list-style: none;
+    }
+
+    h1,
+    p {
+        display: inline;
+    }
+</style>
