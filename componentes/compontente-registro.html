@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+<script src="http://unpkg.com/vue"></script>
+
+<div id="app1">
+    <contador1></contador1>
+    <contador1></contador1>
+    <contador1></contador1>
+</div>
+<hr>
+<div id="app2">
+    <app-contador></app-contador>
+    <app-contador></app-contador>
+    <app-contador></app-contador>
+</div>
+
+<script>
+    const contador = {
+        template:
+            `<div>
+                <span> {{ contador }}</span>
+                <button @click="contador++">Adicionar ( + )</button>
+                <button @click="contador--">Subtrair ( - )</button>
+            </div>`
+        ,
+        data:function contador(){
+            return {contador:0}
+        }
+    }
+    //registro Global
+ 
+
+    new Vue({
+        el:'#app1',
+        /* registro local */
+        components:{
+            contador1: contador
+        }
+    })
+    new Vue({
+        el:'#app2',
+        /* registro local */
+        components:{
+            'app-contador': contador
+        }
+    })
+</script>
