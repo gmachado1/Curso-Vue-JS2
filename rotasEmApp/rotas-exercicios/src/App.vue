@@ -12,23 +12,19 @@
       <router-view />
     </transition>
     <router-view name="menuInferior"></router-view>
-    <div id="rodape">
-      <h3>Curso vue</h3>
-    </div>
+   
   </div>
 </template>
 
 <script>
-import Menu from "./components/template/Menu";
+//import Menu from "./components/template/Menu";
 export default {
   // components:{Menu}
 };
 </script>
 
 <style>
-#rodape {
-  margin-top: 1000px;
-}
+
 
 #app {
   display: flex;
