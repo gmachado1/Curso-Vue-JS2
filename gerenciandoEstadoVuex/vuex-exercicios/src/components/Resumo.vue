@@ -12,7 +12,8 @@
 import {mapGetters} from 'vuex'
 
 export default {
-    computed:mapGetters({total:'valorTotal'})
+    
+    computed:mapGetters('carrinho',{total:'valorTotal'})
     // computed:mapGetters(['valorTotal'])
     // computed: {
     //     total() {
