@@ -19,7 +19,7 @@
           <v-list-tile @click="saveData">
             <v-list-tile-title>Salvar Dados</v-list-tile-title>
           </v-list-tile>
-          <v-list-tile>
+          <v-list-tile @click="loadDataLocal">
             <v-list-tile-title>Carregar Dados</v-list-tile-title>
           </v-list-tile>
         </v-list>
@@ -41,7 +41,7 @@ export default {
     }
   },
   methods:{
-    ...mapActions(['randomizeStocks']),
+    ...mapActions(['randomizeStocks','loadData']),
     endDay(){
       this.randomizeStocks()
     },
@@ -49,6 +49,9 @@ export default {
       const {funds, stockPortfolio, stocks } = this.$store.getters
       this.$http.put('data.json',{funds, stockPortfolio, stocks})
       // this.$http.put('data.json',{funds:funds, stockPortfolio:stockPortfolio, stocks:stocks})
+    },
+    loadDataLocal(){
+      this.loadData()
     }
   }
 };
