@@ -2,7 +2,7 @@
   <v-toolbar app>
     <v-toolbar-title class="headline text-uppercase mr-4">
       <span>Stock</span>
-      <span class="font-weight-light">Trader</span>
+      <span class="font-weight-light">Trader 2 o retorno</span>
     </v-toolbar-title>
     <v-toolbar-items>
       <v-btn flat to="/">Início</v-btn>
