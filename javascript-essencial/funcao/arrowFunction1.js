@@ -12,4 +12,4 @@ let ola = function(){
 
 ola = () => 'olá'
 
-ola = _ =>'olá'
+ola = _ =>'olá' //possui parametro
