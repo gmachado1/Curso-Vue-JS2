@@ -8,7 +8,7 @@ const pessoa = {
 pessoa.falar()
 
 const falar = pessoa.falar
-falar()
-
+falar() // conflit entre paradigma: funcional e OO
+// bind serve para dizer quem seraá o resolvedor de "this" --amarra
 const falarDePessoa = pessoa.falar.bind(pessoa)
 falarDePessoa()

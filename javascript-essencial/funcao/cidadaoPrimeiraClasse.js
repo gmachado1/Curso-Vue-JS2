@@ -39,4 +39,4 @@ function soma(a,b){
 soma(2,3)(4)
 const cinco = soma(2,3)
 cinco(5)
-''
+
