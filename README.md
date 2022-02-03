@@ -1,3 +1,3 @@
 # Curso-Vue-JS2 
-terninando
+refazendo
 
